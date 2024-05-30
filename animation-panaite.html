@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+body{
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050210;
+}
+.circle{
+    position: relative;
+    width: 320px;
+    height:320px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    box-shadow:0 0 30px 15px #ffffff80; 
+    animation: animate 0.5s linear infinite; 
+}
+@keyframes animate {
+    from { transform: rotate(0deg);}
+    to   { transform: rotate(360deg);}
+}
+.circle:after{
+    content: '';
+    position:absolute;
+    top:20px;
+    right:20px;
+    bottom:20px;
+    left:20px;
+    border-radius: 50%;
+    background-color: #050210;
+}
+.circle4{
+    transform:translate(175px, 175px);
+    background-color:#b97aff;
+    border-radius:50%;
+    width: 1px; 
+    height: 1px;
+    animation-name:boom-animation;
+    animation-duration:1.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out /*cubic-bezier(0.5, 0.4, 0.3, -0.10)*/;
+    box-shadow:inset 60px 0  120px #f0f;
+    box-shadow:inset -60px 0  120px #off;
+      }
+    @keyframes boom-animation {
+      0% { transform-origin:0 0 0; opacity:10%;}
+    100% {transform: scale(350,350); transform-origin:0 0 0; opacity:5%}
+      } 
+
+    </style>
+</head>
+<body>
+         <div class="circle">
+         <div class="circle4">
+                </div>
+                </div>
+               </body>
+               </html>
